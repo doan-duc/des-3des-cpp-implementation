@@ -1,6 +1,5 @@
 #include "IP_and_Sbox.hpp"
 #include "Tables.hpp"
-
 #include <iostream>
 
 using namespace std;

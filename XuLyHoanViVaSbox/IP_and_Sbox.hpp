@@ -3,7 +3,6 @@
 #include <functional>
 #include <utility>
 #include <vector>
-
 using namespace std;
 
 namespace des_sim {

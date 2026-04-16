@@ -1,6 +1,5 @@
 #pragma once
 #include <array>
-
 using namespace std;
 
 namespace des_sim {
@@ -15,7 +14,6 @@ static const vector<int> E_TABLE = {
 	24,25,26,27,28,29,
 	28,29,30,31,32, 1
 };
-
 // Bảng hoán vị IP (Initial Permutation) và FP (Final Permutation)
 static constexpr array<int, 64> IP = {
 	58, 50, 42, 34, 26, 18, 10, 2, 
