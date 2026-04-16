@@ -1,5 +1,0 @@
-# Yêu cầu cấu hình ngôn ngữ
-# Python >= 3.8
-
-# Các thư viện phụ thuộc để build dự án ra file thực thi (.exe) (nếu muốn build file .exe)
-pyinstaller>=6.0.0
