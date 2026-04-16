@@ -38,7 +38,6 @@ static constexpr array<int, 64> FP = {
 	34, 2, 42, 10, 50, 18, 58, 26, 
 	33, 1, 41,  9, 49, 17, 57, 25
 };
-
 // Bảng hoán vị P và S-boxes cho hàm F
 static constexpr array<int, 32> P_TABLE = {
 	16,  7, 20, 21, 29, 12, 28, 17,
