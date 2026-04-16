@@ -55,7 +55,6 @@ uint32_t feistel_f(uint32_t R, uint64_t subkey) {
     return static_cast<uint32_t>(permute_bits(s_output, vector<int>(P_TABLE.begin(), P_TABLE.end()), 32));
     //Hoán vị kết quả qua bảng P và trả về
 }
-
 // Hàm thay thế 48 bit qua S-box thành 32 bit
 uint32_t sbox_substitute(uint64_t bits_48) {
     uint32_t result = 0;
