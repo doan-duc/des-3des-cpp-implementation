@@ -6,7 +6,7 @@
 using namespace std;
 
 namespace des_sim {
-
+// Thực hiện hoán vị bit theo bảng 
 uint64_t apply_permutation(uint64_t bits, const vector<int>& table, int input_size) {
     uint64_t result = 0;
     int output_size = static_cast<int>(table.size());
@@ -19,7 +19,7 @@ uint64_t apply_permutation(uint64_t bits, const vector<int>& table, int input_si
     }
     return result;
 }
-
+// Dịch trái xoay vòng giới hạn trong 28 bit
 uint32_t left_circular_shift_28(uint32_t value, int shift) {
     constexpr uint32_t MASK_28 = 0x0FFFFFFF; // Đảm bảo chỉ có 28 bit được sử dụng
     // Thực hiện dịch trái xoay vòng
