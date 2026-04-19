@@ -34,8 +34,10 @@ vector<uint64_t> generate_subkeys(uint64_t key, bool verbose) {
     uint32_t D = static_cast<uint32_t>(key_56 & 0x0FFFFFFF);
     vector<uint64_t> subkeys;
     subkeys.reserve(16);
+    // Vòng lặp sinh khóa cho 16 vòng của thuật toán 
     for (int rnd = 0; rnd < 16; ++rnd) {
         int shift = SHIFT_SCHEDULE[rnd];
+        // Thực hiện dịch trái xoay vòng cho cả nửa C và nửa D
         C = left_circular_shift_28(C, shift);
         D = left_circular_shift_28(D, shift);
         uint64_t CD = (static_cast<uint64_t>(C) << 28) | D;
