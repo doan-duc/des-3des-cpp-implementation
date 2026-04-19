@@ -7,11 +7,11 @@
 using namespace std;
 
 namespace des_sim {
-
+// Bọc hàm sinh khóa DES cơ bản cho đối tượng DESKey
 vector<uint64_t> generate_subkeys_from_deskey(const DESKey& des_key, bool verbose) {
     return generate_subkeys(des_key.value, verbose);
 }
-
+// Sinh 3 tập khóa con (48 khóa) cho 3DES và đo thời gian thực thi
 tuple<vector<uint64_t>, vector<uint64_t>, vector<uint64_t>, double> generate_all_3des_subkeys(
     const TripleDESKey& triple_key, bool verbose
 ) {
@@ -27,6 +27,7 @@ tuple<vector<uint64_t>, vector<uint64_t>, vector<uint64_t>, double> generate_all
     }
 
     auto start = chrono::high_resolution_clock::now();
+    // Sinh khóa con độc lập cho K1, K2, K3
     auto sk1 = generate_subkeys(k1);
     auto sk2 = generate_subkeys(k2);
     auto sk3 = generate_subkeys(k3);
